@@ -1,20 +1,35 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from 'react';
+import { StyleSheet, ScrollView, Text } from 'react-native';
+import Exercicio1 from './components/Exercicio1';
+import Exercicio2 from './components/Exercicio2';
+import Exercicio3 from './components/Exercicio3';
+import Exercicio4 from './components/Exercicio4';
+import Exercicio5 from './components/Exercicio5';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <ScrollView contentContainerStyle={styles.container}>
+      <Text style={styles.header}>Prática useState - React Native</Text>
+      
+      <Exercicio1 />
+      <Exercicio2 />
+      <Exercicio3 />
+      <Exercicio4 />
+      <Exercicio5 />
+    </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    padding: 20,
+    paddingTop: 50,
     backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+  },
+  header: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    textAlign: 'center',
+    marginBottom: 20,
   },
 });
